@@ -18,6 +18,7 @@ public class ai2 : MonoBehaviour
     public const int STATE_RUN = 1;
     public float j;
     public bool check;
+    public bool dead;
 
     //怪物当前状态
     private int NowState;
@@ -36,6 +37,7 @@ public class ai2 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.Find("00");
+        dead = false;
     }
 
     void Update()
@@ -43,58 +45,61 @@ public class ai2 : MonoBehaviour
         Vector3 pp = player.transform.position;
         pp.y = j;
         j = GetComponent<Transform>().position.y;
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (!dead)
         {
-            t = 1;
-        }
-      /*  if (Input.GetKey(KeyCode.Space))
-        {
-            check = false;
-        }
-        else
-        {
-            check = true;
-        }
-        if(check)
-        {
-            pp.y = j;
-            j = GetComponent<Transform>().position.y;
-        }
-        else
-        {
-            pp.y = move.manager.j;
-        }*/
-        if (Vector3.Distance(transform.position, player.transform.position) <= AI_ATTACT)
-        {
-            a = a - Time.deltaTime;
-            if (a <= 0)
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                attack = true;
-                this.GetComponent<Animation>().Play("ea 002");
-                a = Random.Range(4, 6);
+                t = 1;
+            }
+            /*  if (Input.GetKey(KeyCode.Space))
+              {
+                  check = false;
+              }
+              else
+              {
+                  check = true;
+              }
+              if(check)
+              {
+                  pp.y = j;
+                  j = GetComponent<Transform>().position.y;
+              }
+              else
+              {
+                  pp.y = move.manager.j;
+              }*/
+            if (Vector3.Distance(transform.position, player.transform.position) <= AI_ATTACT)
+            {
+                a = a - Time.deltaTime;
+                if (a <= 0)
+                {
+                    attack = true;
+                    this.GetComponent<Animation>().Play("ea 002");
+                    a = Random.Range(4, 6);
+
+                }
+                else
+                {
+                    attack = false;
+                }
 
             }
-            else
+            if (!attack)
             {
-                attack = false;
+                area2.GetComponent<BoxCollider>().enabled = false;
+            }
+            if (attack)
+            {
+                area2.GetComponent<BoxCollider>().enabled = true;
             }
 
-        }
-        if (!attack)
-        {
-            area2.GetComponent<BoxCollider>().enabled = false;
-        }
-        if (attack)
-        {
-            area2.GetComponent<BoxCollider>().enabled = true;
-        }
-
-        //当敌人与怪物间的距离小于攻击范围半径的时候
-        if (Vector3.Distance(transform.position, player.transform.position) < AI_ATTACT_DISTANCE)
-        {
-
-            if (Vector3.Distance(transform.position, player.transform.position) > AI_ATTACT)
+            //当敌人与怪物间的距离小于攻击范围半径的时候
+            if (Vector3.Distance(transform.position, player.transform.position) < AI_ATTACT_DISTANCE)
             {
+
+                if (Vector3.Distance(transform.position, player.transform.position) > AI_ATTACT)
+                {
                     //敌人开始奔跑
                     this.GetComponent<Animation>().Play("ew 002");
                     //敌人进入奔跑状态
@@ -103,57 +108,58 @@ public class ai2 : MonoBehaviour
                     transform.LookAt(pp);
                     //向玩家靠近
                     transform.Translate(Vector3.forward * Time.deltaTime * 50);
+                }
+                if (!bg)
+                {
+                    Instantiate(bgm, transform.position, Quaternion.identity);
+                    bg = true;
+                }
             }
-            if (!bg)
+            if (Vector3.Distance(transform.position, player.transform.position) > AI_ATTACT)
             {
-                Instantiate(bgm, transform.position, Quaternion.identity);
-                bg = true;
+
             }
+            //  else
+            //   {
+            //当当前时间与上一次思考时间的差值大于怪物的思考时间时怪物开始思考
+            //    if (Time.time - LastThinkTime > AI_THINK_TIME)
+            //     {
+            //开始思考
+            //      LastThinkTime = Time.time;
+            //获取0-3之间的随机数字
+            //        int Rnd = Random.Range(0, 2);
+            //根据随机数值为怪物赋予不同的状态行为
+            //       switch (Rnd)
+            //        {
+            //            case 0:
+            //站立状态
+            //               this.GetComponent<Animation>().Play("idol");
+            //                NowState = STATE_STAND;
+            //                break;
+
+            //             case 1:
+            //行走状态
+            //使怪物旋转以完成行走动作
+            //               Quaternion mRotation = Quaternion.Euler(0, Random.Range(1, 5) * 90, 0);
+            //              transform.rotation = Quaternion.Slerp(transform.rotation, mRotation, Time.deltaTime * 1000);
+            //播放动画
+            //              this.GetComponent<Animation>().Play("STOP1");
+            //改变位置
+            //           transform.Translate(Vector3.forward * Time.deltaTime * 15);
+            //             NowState = STATE_WALK;
+            //             break;
+
+            //          case 2:
+            //奔跑状态
+            //             this.GetComponent<Animation>().Play("run");
+            //              transform.Translate(Vector3.forward * Time.deltaTime * 20);
+            //              NowState = STATE_RUN;
+            //             break;
+
+            //  }
+            //   }
+            //    }
         }
-        if (Vector3.Distance(transform.position, player.transform.position) > AI_ATTACT)
-        {
-
-        }
-        //  else
-        //   {
-        //当当前时间与上一次思考时间的差值大于怪物的思考时间时怪物开始思考
-          //    if (Time.time - LastThinkTime > AI_THINK_TIME)
-         //     {
-        //开始思考
-          //      LastThinkTime = Time.time;
-        //获取0-3之间的随机数字
-        //        int Rnd = Random.Range(0, 2);
-        //根据随机数值为怪物赋予不同的状态行为
-        //       switch (Rnd)
-        //        {
-        //            case 0:
-        //站立状态
-        //               this.GetComponent<Animation>().Play("idol");
-        //                NowState = STATE_STAND;
-        //                break;
-
-        //             case 1:
-        //行走状态
-        //使怪物旋转以完成行走动作
-        //               Quaternion mRotation = Quaternion.Euler(0, Random.Range(1, 5) * 90, 0);
-        //              transform.rotation = Quaternion.Slerp(transform.rotation, mRotation, Time.deltaTime * 1000);
-        //播放动画
-        //              this.GetComponent<Animation>().Play("STOP1");
-        //改变位置
-        //           transform.Translate(Vector3.forward * Time.deltaTime * 15);
-        //             NowState = STATE_WALK;
-        //             break;
-
-        //          case 2:
-        //奔跑状态
-        //             this.GetComponent<Animation>().Play("run");
-        //              transform.Translate(Vector3.forward * Time.deltaTime * 20);
-        //              NowState = STATE_RUN;
-        //             break;
-
-        //  }
-        //   }
-      //    }
         rb.AddForce(Vector3.down * 50000);
     }
     void Damage(float damagevalue)
@@ -165,8 +171,10 @@ public class ai2 : MonoBehaviour
             {
                 TMP.ctrl.getscore(1);
             }
-            Destroy(this.gameObject);
-            exp.manager.getscore(150);
+            Destroy(this.gameObject,1);
+            exp.manager.getscore(50);
+            this.GetComponent<Animation>().Play("ed 002");
+            dead = true;
         }
     }
     void OnTriggerExit(Collider other)
@@ -192,5 +200,14 @@ public class ai2 : MonoBehaviour
             t = t - Time.deltaTime;
         }
 
+
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "effect")
+        {
+            Damage(50);
+            Instantiate(att, transform.position, transform.rotation);//特效
+        }
     }
 }

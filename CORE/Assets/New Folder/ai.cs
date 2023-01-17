@@ -17,6 +17,7 @@ public class ai : MonoBehaviour
     public const int STATE_WALK = 1;
     public const int STATE_RUN = 2;
     public float j;
+    public bool dead;
   //  public bool check;
 
     //怪物当前状态
@@ -43,6 +44,7 @@ public class ai : MonoBehaviour
         Vector3 pp = player.transform.position;
         pp.y = j;
         j = GetComponent<Transform>().position.y;
+        if(!dead){
         if (Input.GetKeyDown(KeyCode.Mouse0))
               {
             t = 1;
@@ -113,46 +115,47 @@ public class ai : MonoBehaviour
         {  
 
         }
-        //  else
-        //   {
-        //当当前时间与上一次思考时间的差值大于怪物的思考时间时怪物开始思考
-         //     if (Time.time - LastThinkTime > AI_THINK_TIME)
-           //   {
-        //开始思考
-          //     LastThinkTime = Time.time;
-        //获取0-3之间的随机数字
-        //        int Rnd = Random.Range(0, 2);
-        //根据随机数值为怪物赋予不同的状态行为
-        //       switch (Rnd)
-        //        {
-        //            case 0:
-        //站立状态
-        //               this.GetComponent<Animation>().Play("idol");
-        //                NowState = STATE_STAND;
-        //                break;
+            //  else
+            //   {
+            //当当前时间与上一次思考时间的差值大于怪物的思考时间时怪物开始思考
+            //     if (Time.time - LastThinkTime > AI_THINK_TIME)
+            //   {
+            //开始思考
+            //     LastThinkTime = Time.time;
+            //获取0-3之间的随机数字
+            //        int Rnd = Random.Range(0, 2);
+            //根据随机数值为怪物赋予不同的状态行为
+            //       switch (Rnd)
+            //        {
+            //            case 0:
+            //站立状态
+            //               this.GetComponent<Animation>().Play("idol");
+            //                NowState = STATE_STAND;
+            //                break;
 
-        //             case 1:
-        //行走状态
-        //使怪物旋转以完成行走动作
-        //               Quaternion mRotation = Quaternion.Euler(0, Random.Range(1, 5) * 90, 0);
-        //              transform.rotation = Quaternion.Slerp(transform.rotation, mRotation, Time.deltaTime * 1000);
-        //播放动画
-        //              this.GetComponent<Animation>().Play("STOP1");
-        //改变位置
-        //           transform.Translate(Vector3.forward * Time.deltaTime * 15);
-        //             NowState = STATE_WALK;
-        //             break;
+            //             case 1:
+            //行走状态
+            //使怪物旋转以完成行走动作
+            //               Quaternion mRotation = Quaternion.Euler(0, Random.Range(1, 5) * 90, 0);
+            //              transform.rotation = Quaternion.Slerp(transform.rotation, mRotation, Time.deltaTime * 1000);
+            //播放动画
+            //              this.GetComponent<Animation>().Play("STOP1");
+            //改变位置
+            //           transform.Translate(Vector3.forward * Time.deltaTime * 15);
+            //             NowState = STATE_WALK;
+            //             break;
 
-        //          case 2:
-        //奔跑状态
-        //             this.GetComponent<Animation>().Play("run");
-        //              transform.Translate(Vector3.forward * Time.deltaTime * 20);
-        //              NowState = STATE_RUN;
-        //             break;
+            //          case 2:
+            //奔跑状态
+            //             this.GetComponent<Animation>().Play("run");
+            //              transform.Translate(Vector3.forward * Time.deltaTime * 20);
+            //              NowState = STATE_RUN;
+            //             break;
 
-        //  }
-        //   }
-      //    }
+            //  }
+            //   }
+            //    }
+        }
         rb.AddForce(Vector3.down * 50000);
     }
     void Damage(float damagevalue)
@@ -164,8 +167,10 @@ public class ai : MonoBehaviour
             {
                 TMP.ctrl.getscore(1);
             }
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,2);
             exp.manager.getscore(20);
+            this.GetComponent<Animation>().Play("ed 001");
+            dead = true;
         }
     }
     void OnTriggerExit(Collider other)
@@ -191,6 +196,15 @@ public class ai : MonoBehaviour
             t = t - Time.deltaTime;
         }
 
+
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "effect")
+        {
+            Damage(50);
+            Instantiate(att, transform.position, transform.rotation);//特效
+        }
     }
 
 }

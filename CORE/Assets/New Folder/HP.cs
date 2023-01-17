@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
+    public GameObject up;
+    public GameObject player;
     public static HP manager;
     public const int maxHealth = 100;
     public int currentHealth = maxHealth;
@@ -59,6 +61,7 @@ public class HP : MonoBehaviour
     {
         LV += value;
         currentHealth = 100;
+        Instantiate(up, player.transform.position, up.transform.rotation);
     }
     public void getbot(int value)
     {

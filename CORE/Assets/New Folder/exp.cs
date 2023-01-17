@@ -24,10 +24,10 @@ public class exp : MonoBehaviour
         {
             b.sizeDelta += new Vector2(1, 0) * Time.deltaTime * 10;
         }
-        if(score > 100)
+        if(score >= 100)
         {
             score = score - 100;
-            NewBehaviourScript1.manager.getd(50);
+            NewBehaviourScript1.manager.getd(10);
             HP.manager.getLV(1);
         }
     }

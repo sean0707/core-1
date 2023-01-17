@@ -25,7 +25,7 @@ public class NewBehaviourScript2 : MonoBehaviour
     {
         if (e)
         {
-          //  this.transform.position = target.position - offset ;
+          // this.transform.position = target.position - offset ;
          //   transform.rotation = Quaternion.Euler(25, 0, 0);
             transform.position = (target.position) + Quaternion.Euler(x, y, 0) * (Vector3.back * d) + offset1;
             transform.LookAt(target.position + offset1);

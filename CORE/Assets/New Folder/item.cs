@@ -8,6 +8,8 @@ public class item : MonoBehaviour
     public int T1;
     public int T2;
     public GameObject x1;
+    public GameObject player;
+    public GameObject hef;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +32,14 @@ public class item : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            T1 = T1 - 1;
-            HP.manager.getitem(1);
+            if (T1 > 0)
+            {
+                T1 = T1 - 1;
+                HP.manager.getitem(1);
+                move.manager.getscore(1.1f);
+                player.GetComponent<Animation>().Play("heal");
+                hef.gameObject.GetComponent<ParticleSystem>().Play();
+            }
         }
     }
     public void getT1(int value)

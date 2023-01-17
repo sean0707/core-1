@@ -17,6 +17,7 @@ public class TMP : MonoBehaviour
     public int x;
     public int y;
     public bool clear;
+    public GameObject effect;
     private void Awake()
     {
         ctrl = this;
@@ -74,6 +75,7 @@ public class TMP : MonoBehaviour
     }
     void Clear()
     {
+        effect.gameObject.GetComponent<ParticleSystem>().Play();
         exp.manager.getscore(50);
         x = 0;
         Text.text = Resources.Load<TextAsset>(m).text + "(" + x + "/" + y + ")";

@@ -5474,7 +5474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   ex: 10
-  b: 0
+  b: 1
   t1: 1
 --- !u!65 &767243247
 BoxCollider:

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class bgm : MonoBehaviour
 {
+    public float D = 1;
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 1);
+        Destroy(gameObject, D);
     }
 
     // Update is called once per frame

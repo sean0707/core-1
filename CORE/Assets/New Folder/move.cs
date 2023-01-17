@@ -5,7 +5,7 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     public static move manager;
-    public GameObject bgm;
+  //  public GameObject bgm;
     public CharacterController characterController;
     // Start is called before the first frame update
     public Rigidbody rb;
@@ -33,16 +33,20 @@ public class move : MonoBehaviour
 
         t = t - Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+     //   if (Input.GetKeyDown(KeyCode.Mouse0))
+     //   {
+      //      Instantiate(bgm, transform.position, Quaternion.identity);
+        //    t = 1.1f;
+         //   attack = true;
+     //   }
+       /* else */if (t <= 0)
+               {
+                     attack = false;
+               }
+        else
         {
-            Instantiate(bgm, transform.position, Quaternion.identity);
-            t = 1.1f;
             attack = true;
         }
-        else if (t <= 0)
-           {
-          attack = false;
-           }
           if (!attack)
 
      //   if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -121,6 +125,7 @@ public class move : MonoBehaviour
             gameObject.transform.SetPositionAndRotation(newPos, gameObject.transform.rotation);
         }
         rb.AddForce(Vector3.down * 30000);
+
     }
 
        

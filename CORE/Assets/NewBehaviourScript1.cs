@@ -44,7 +44,7 @@ public class NewBehaviourScript1 : MonoBehaviour
          b = b + 2;
          c = c - 1;
          d = d - 1;
-            gameObject.transform.position += new Vector3( 0, 4);
+            gameObject.transform.position += new Vector3( 0, 3.5f);
         }   
     }
     public void Yellow()

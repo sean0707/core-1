@@ -213,5 +213,14 @@ public class ai3 : MonoBehaviour
             t = t - Time.deltaTime;
         }
 
+
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "effect")
+        {
+            Damage(50);
+            Instantiate(att, transform.position, transform.rotation);//特效
+        }
     }
 }

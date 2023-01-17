@@ -23,18 +23,26 @@ public class battle2 : MonoBehaviour
     {
 
         t = t - Time.deltaTime;
+
         if (wepon.w == 2)
         {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                t = 1.1f;
+                attack = true;
+            }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<Animation>().Play("a2");
                 t = 0.3f;
                 move.manager.getscore(0.3f);
                 attack = true;
+                wepon.manager.a = true;
             }
             else if (t <= 0)
             {
                 attack = false;
+                wepon.manager.a = false;
             }
         }
         if (!attack)

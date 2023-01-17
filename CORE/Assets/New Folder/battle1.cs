@@ -9,6 +9,7 @@ public class battle1 : MonoBehaviour
     public bool attack;
     public float t = 1;
     public bool idol;
+    public GameObject effect;
    
 
     // Start is called before the first frame update
@@ -27,23 +28,31 @@ public class battle1 : MonoBehaviour
         t = t - Time.deltaTime;
         if (wepon.w == 1)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                t = 1.1f;
+                attack = true;
+            }
+                if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<Animation>().Play("a5");
                 move.manager.getscore(1.1f);
                 t = 1.1f;
                 attack = true;
+                wepon.manager.a = true;
                 //  Instantiate(bgm, transform.position, Quaternion.identity);
             }
             else if (t <= 0)
             {
                 attack = false;
+                wepon.manager.a = false;
             }
         }
         if (!attack)
 
         {
             weapon.GetComponent<MeshCollider>().enabled = false;
+            effect.GetComponent<TrailRenderer>().enabled = false;
             //   weapon.SetActive(false);
             if (Input.GetKey(KeyCode.W))
         {
@@ -92,6 +101,7 @@ public class battle1 : MonoBehaviour
         if (attack)
         {
             weapon.GetComponent<MeshCollider>().enabled = true;
+            effect.GetComponent<TrailRenderer>().enabled = true;
             // weapon.SetActive(true);
         }
         if(t < -4)
@@ -106,6 +116,5 @@ public class battle1 : MonoBehaviour
             HP.manager.getbot(0);
 
         }
-       
     }
 }
