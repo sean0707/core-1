@@ -9,7 +9,7 @@ public class wepon : MonoBehaviour
     public GameObject w1;
     public GameObject w2;
     public GameObject w3;
-    //  public GameObject w4;
+    public GameObject w4;
     public GameObject b;
     public bool a;
     F mode = F.w1;
@@ -19,7 +19,7 @@ public class wepon : MonoBehaviour
         w1=1,
         w2=2,
         w3=3,
-       // w4=4
+        w4=4
     }
     void Start()
     {
@@ -69,46 +69,47 @@ public class wepon : MonoBehaviour
                         w2.SetActive(false);
                         w1.SetActive(true);
                         w3.SetActive(false);
-                        //   w4.SetActive(false);
+                        w4.SetActive(false);
                         b.GetComponent<battle2>().enabled = false;
                         b.GetComponent<battle1>().enabled = true;
                         b.GetComponent<battle3>().enabled = false;
+                        b.GetComponent<battle4>().enabled = false;
                         w = 1;
-                        //     b.GetComponent<battle4>().enabled = false;
                         break;
                     case F.w2:
                         w1.SetActive(false);
                         w2.SetActive(true);
                         w3.SetActive(false);
-                        //     w4.SetActive(false);
+                        w4.SetActive(false);
                         b.GetComponent<battle1>().enabled = false;
                         b.GetComponent<battle2>().enabled = true;
                         b.GetComponent<battle3>().enabled = false;
+                        b.GetComponent<battle4>().enabled = false;
                         w = 2;
-                        //     b.GetComponent<battle4>().enabled = false;
                         break;
                     case F.w3:
                         w3.SetActive(true);
                         w2.SetActive(false);
                         w1.SetActive(false);
-                        //    w4.SetActive(false);
+                        w4.SetActive(false);
                         b.GetComponent<battle1>().enabled = false;
                         b.GetComponent<battle3>().enabled = true;
                         b.GetComponent<battle2>().enabled = false;
+                        b.GetComponent<battle4>().enabled = false;
                         w = 3;
-                        mode = 0;
-                        //    b.GetComponent<battle4>().enabled = false;
                         break;
-                        /*  case F.w4:
+                          case F.w4:
                              w4.SetActive(true);
                                w2.SetActive(false);
                                w1.SetActive(false);
                                w3.SetActive(false);
                                b.GetComponent<battle1>().enabled = false;
-                              b.GetComponent<battle4>().enabled = true;
+                               b.GetComponent<battle4>().enabled = true;
                                b.GetComponent<battle2>().enabled = false;
                                b.GetComponent<battle3>().enabled = false;
-                               break;*/
+                        w = 4;
+                        mode = 0;
+                        break;
 
                 }
 

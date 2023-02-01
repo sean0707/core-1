@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bgm2 : MonoBehaviour
 {
-    public bool B;
+  //  public bool B;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class bgm2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (wepon.w == 1))
         {
             gameObject.GetComponent<AudioSource>().enabled = false;
             gameObject.GetComponent<AudioSource>().enabled = true;

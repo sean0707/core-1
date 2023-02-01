@@ -5,12 +5,11 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     public static move manager;
-  //  public GameObject bgm;
+    //  public GameObject bgm;
     public CharacterController characterController;
     // Start is called before the first frame update
     public Rigidbody rb;
     public bool attack;
-    public bool stay;
     public float j;
 
 
@@ -111,20 +110,21 @@ public class move : MonoBehaviour
                 // rb.velocity = Vector3.back * 500;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            j = GetComponent<Transform>().position.y;
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            //  characterController.SimpleMove(transform.forward*100);
-            Vector3 newPos = new Vector3();
-            newPos.x = gameObject.transform.position.x;
-            newPos.y = gameObject.transform.position.y + 4;
-            newPos.z = gameObject.transform.position.z;
-            gameObject.transform.SetPositionAndRotation(newPos, gameObject.transform.rotation);
-        }
-        rb.AddForce(Vector3.down * 30000);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                j = GetComponent<Transform>().position.y;
+            }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                //  characterController.SimpleMove(transform.forward*100);
+                Vector3 newPos = new Vector3();
+                newPos.x = gameObject.transform.position.x;
+                newPos.y = gameObject.transform.position.y + speed;
+                newPos.z = gameObject.transform.position.z;
+                gameObject.transform.SetPositionAndRotation(newPos, gameObject.transform.rotation);
+             }
+
+        rb.AddForce(Vector3.down * 25000);
 
     }
 
@@ -137,7 +137,6 @@ public class move : MonoBehaviour
             Application.LoadLevel(other.name);
 
         }
-
     }
     public void getscore(float value)
     {

@@ -22,16 +22,28 @@ public class battle4 : MonoBehaviour
     void Update()
     {
 
+
         t = t - Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (wepon.w == 4)
         {
-            GetComponent<Animation>().Play("a4");
-            t = 1.0f;
-            attack = true;
-        }
-        else if (t <= 0)
-        {
-            attack = false;
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                t = 1.1f;
+                attack = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                GetComponent<Animation>().Play("a4");
+                t = 1.5f;
+                move.manager.getscore(1.5f);
+                attack = true;
+                wepon.manager.a = true;
+            }
+            else if (t <= 0)
+            {
+                attack = false;
+                wepon.manager.a = false;
+            }
         }
         if (!attack)
 
@@ -84,7 +96,10 @@ public class battle4 : MonoBehaviour
         }
         if (attack)
         {
-            weapon.GetComponent<MeshCollider>().enabled = true;
+            if (t < 1)
+            {
+                weapon.GetComponent<MeshCollider>().enabled = true;
+            }
             // weapon.SetActive(true);
         }
         if (t < -3)
