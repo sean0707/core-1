@@ -36,7 +36,10 @@ public class box : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        Damage(1);  
+        if(other.tag== "wepon")
+        {
+            Damage(1);
+        }
 
     }
 }

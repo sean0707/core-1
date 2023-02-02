@@ -6,15 +6,15 @@ public class bullet : MonoBehaviour
 {
     public float t;
     public float c;
-    public GameObject bb;
+ //   public GameObject bb;
     //   public Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
         t = c;
-        Vector3 pp = bb.transform.position;
-        transform.LookAt(pp);
+        // Vector3 pp = bb.transform.position;
+        // transform.LookAt(pp);
         // rb = GetComponent<Rigidbody>();
     }
 
@@ -27,11 +27,19 @@ public class bullet : MonoBehaviour
         //    newPos.y = gameObject.transform.position.y;
         //  newPos.z = gameObject.transform.position.z + 5;
         //   gameObject.transform.SetPositionAndRotation(newPos, gameObject.transform.rotation);
-      //  transform.position += transform.forward *5;
+         // transform.position += transform.forward *5;
+        transform.Translate(Vector3.forward * Time.deltaTime * 400);
         if (t < 0)
         {
             pool<bullet>.Instance.Recycle(this);
             t = c;
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "enemy")
+        {
+            pool<bullet>.Instance.Recycle(this);
         }
     }
 }

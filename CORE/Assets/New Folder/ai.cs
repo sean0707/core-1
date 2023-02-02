@@ -205,6 +205,11 @@ public class ai : MonoBehaviour
             Damage(50);
             Instantiate(att, transform.position, transform.rotation);//特效
         }
+        if (other.tag == "bullet")
+        {
+            Damage(10);
+            Instantiate(att, transform.position, transform.rotation);//特效
+        }
     }
 
 }

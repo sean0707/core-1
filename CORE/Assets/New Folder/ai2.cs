@@ -165,16 +165,19 @@ public class ai2 : MonoBehaviour
     void Damage(float damagevalue)
     {
         hp -= damagevalue;
-        if (hp <= 0)
+        if (!dead)
         {
-            if (TMP.ctrl.m == "a")
+            if (hp <= 0)
             {
-                TMP.ctrl.getscore(1);
+                if (TMP.ctrl.m == "a")
+                {
+                    TMP.ctrl.getscore(1);
+                }
+                Destroy(this.gameObject, 1);
+                exp.manager.getscore(50);
+                this.GetComponent<Animation>().Play("ed 002");
+                dead = true;
             }
-            Destroy(this.gameObject,1);
-            exp.manager.getscore(50);
-            this.GetComponent<Animation>().Play("ed 002");
-            dead = true;
         }
     }
     void OnTriggerExit(Collider other)
@@ -207,6 +210,11 @@ public class ai2 : MonoBehaviour
         if (other.tag == "effect")
         {
             Damage(50);
+            Instantiate(att, transform.position, transform.rotation);//特效
+        }
+        if (other.tag == "bullet")
+        {
+            Damage(10);
             Instantiate(att, transform.position, transform.rotation);//特效
         }
     }

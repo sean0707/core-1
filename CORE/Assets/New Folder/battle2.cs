@@ -33,7 +33,7 @@ public class battle2 : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                GetComponent<Animation>().Play("a2");
+                GetComponent<Animation>().Play("a8");
                 t = 0.3f;
                 move.manager.getscore(0.3f);
                 attack = true;

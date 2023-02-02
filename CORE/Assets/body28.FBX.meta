@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f830ba360eaaf274ebeec292a64c22af
+guid: aed6c6b8438b9dc4eacbdc196c4f3b76
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -22,10 +22,12 @@ ModelImporter:
     100032: Bone024
     100034: Bone025
     100036: Bone026
-    100038: c_body_01_seii_05_0
-    100040: c_body_07_sf_01_0
-    100042: c_head_07_sf_01_0
-    100044: c_face_07_u_01_0
+    100038: Bone027
+    100040: c_body_14_sf_01_0
+    100042: c_face_14_u_01_0
+    100044: c_head_14_sf_01_0
+    100046: c_mouth_14_u_01_0
+    100048: w02
     400000: //RootNode
     400002: Bone001
     400004: Bone002
@@ -45,25 +47,40 @@ ModelImporter:
     400032: Bone024
     400034: Bone025
     400036: Bone026
-    400038: c_body_01_seii_05_0
-    400040: c_body_07_sf_01_0
-    400042: c_head_07_sf_01_0
-    400044: c_face_07_u_01_0
-    2100000: 'Material #58'
-    2100002: 'Material #99'
-    2100004: 'Material #98'
-    2100006: 'Material #124'
-    4300000: c_body_07_sf_01_0
-    4300002: c_head_07_sf_01_0
-    4300004: c_body_01_seii_05_0
-    4300006: c_face_07_u_01_0
-    7400000: run
+    400038: Bone027
+    400040: c_body_14_sf_01_0
+    400042: c_face_14_u_01_0
+    400044: c_head_14_sf_01_0
+    400046: c_mouth_14_u_01_0
+    400048: w02
+    2100000: 'Material #102'
+    2100002: 'Material #100'
+    2100004: 'Material #103'
+    2100006: 'Material #101'
+    2100008: "\u722A_m0"
+    2100010: "\u722A_m1"
+    2100012: "\u722A_m2"
+    2100014: "\u722A_m3"
+    2100016: "\u722A_m4"
+    2100018: "\u722A_m5"
+    2100020: "\u722A_m6"
+    2100022: "\u722A_m7"
+    2100024: "\u722A_m8"
+    2100026: "\u722A_m9"
+    2100028: "\u722A_m10"
+    4300000: c_body_14_sf_01_0
+    4300002: c_face_14_u_01_0
+    4300004: c_head_14_sf_01_0
+    4300006: c_mouth_14_u_01_0
+    4300008: w02
+    7400000: a8
     9500000: //RootNode
     11100000: //RootNode
-    13700000: c_body_01_seii_05_0
-    13700002: c_body_07_sf_01_0
-    13700004: c_head_07_sf_01_0
-    13700006: c_face_07_u_01_0
+    13700000: c_body_14_sf_01_0
+    13700002: c_face_14_u_01_0
+    13700004: c_head_14_sf_01_0
+    13700006: c_mouth_14_u_01_0
+    13700008: w02
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -93,17 +110,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: run
+      name: a8
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 6
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

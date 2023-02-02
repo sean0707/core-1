@@ -48,7 +48,7 @@ public class battle4 : MonoBehaviour
         if (!attack)
 
         {
-            weapon.GetComponent<MeshCollider>().enabled = false;
+        //    weapon.GetComponent<MeshCollider>().enabled = false;
             //   weapon.SetActive(false);
             if (Input.GetKey(KeyCode.W))
             {
@@ -98,7 +98,7 @@ public class battle4 : MonoBehaviour
         {
             if (t < 1)
             {
-                weapon.GetComponent<MeshCollider>().enabled = true;
+            //    weapon.GetComponent<MeshCollider>().enabled = true;
             }
             // weapon.SetActive(true);
         }
