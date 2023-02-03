@@ -34,6 +34,10 @@ public class bullet : MonoBehaviour
             pool<bullet>.Instance.Recycle(this);
             t = c;
         }
+        if (wepon.w == 4)
+        {
+
+        }
     }
     void OnTriggerEnter(Collider other)
     {

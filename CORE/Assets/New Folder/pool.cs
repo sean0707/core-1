@@ -29,7 +29,7 @@ public class pool <A> where A : MonoBehaviour
         B = D;
         Q = new Queue<A>();
     }
-    public A Spawn(Vector3 position, Quaternion quaternion)
+    public A Spawn(Vector3 position, Quaternion quaternion, Transform parent)
     {
         if (B == null)
         {
@@ -37,7 +37,7 @@ public class pool <A> where A : MonoBehaviour
         }
         if (queueCount <= 0)
         {
-            GameObject g = Object.Instantiate(B, position, quaternion);
+            GameObject g = Object.Instantiate(B, position, quaternion, parent);
             A t = g.GetComponent<A>();
             if (t == null)
             {
@@ -48,6 +48,7 @@ public class pool <A> where A : MonoBehaviour
         A obj = Q.Dequeue();
         obj.gameObject.transform.position = position;
         obj.gameObject.transform.rotation = quaternion;
+        obj.gameObject.transform.parent = parent;
         obj.gameObject.SetActive(true);
         return obj;
     }

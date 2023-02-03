@@ -31,7 +31,7 @@ public class shot : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                bullet b = bp.Spawn(this.transform.position, this.transform.rotation);
+                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, s.transform.parent);
                 t = 1.5f;
                 attack = true;
             }
@@ -40,6 +40,25 @@ public class shot : MonoBehaviour
                 attack = false;
             }
                     this.gameObject.GetComponent<MeshCollider>().enabled = true;
+        }
+        if (wepon.w == 5)
+        {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                t = 1.1f;
+                attack = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, s.transform.parent);
+                t = 2;
+                attack = true;
+            }
+            else if (t <= 0)
+            {
+                attack = false;
+            }
+            this.gameObject.GetComponent<MeshCollider>().enabled = true;
         }
         else
         {
