@@ -31,7 +31,7 @@ public class shot : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, s.transform.parent);
+                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, this.transform.parent);
                 t = 1.5f;
                 attack = true;
             }
@@ -50,7 +50,7 @@ public class shot : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, s.transform.parent);
+                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, this.transform.parent);
                 t = 2;
                 attack = true;
             }
@@ -60,15 +60,11 @@ public class shot : MonoBehaviour
             }
             this.gameObject.GetComponent<MeshCollider>().enabled = true;
         }
-        else
-        {
-            this.gameObject.GetComponent<MeshCollider>().enabled = false;
-            s.SetActive(false);
-        }
         if(target == default)
         {
             s.SetActive(false);
         }
+        target = null;
     }
     void OnTriggerStay(Collider other)
     {
@@ -84,7 +80,6 @@ public class shot : MonoBehaviour
     {
         if (other.tag == "enemy")
         {
-            target = null;
             s.SetActive(false);
         }
     }

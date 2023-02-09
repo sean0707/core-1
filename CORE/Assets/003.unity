@@ -13860,7 +13860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1582211ba6c303a4ebef86c87386e0c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.1
+      value: 55.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1582211ba6c303a4ebef86c87386e0c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17253,6 +17253,7 @@ MonoBehaviour:
   w2: {fileID: 794709054}
   w3: {fileID: 500050099}
   w4: {fileID: 0}
+  w5: {fileID: 0}
   b: {fileID: 1833548830}
   a: 0
 --- !u!114 &911886758
@@ -41969,7 +41970,7 @@ PrefabInstance:
     - target: {fileID: 3786652555413417501, guid: 94d8b6c1ff8c5604db34b362948d2026,
         type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d8b6c1ff8c5604db34b362948d2026, type: 3}

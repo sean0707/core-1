@@ -6,7 +6,9 @@ public class bullet : MonoBehaviour
 {
     public float t;
     public float c;
- //   public GameObject bb;
+    public GameObject w4;
+    public GameObject w5;
+    //   public GameObject bb;
     //   public Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,13 @@ public class bullet : MonoBehaviour
         }
         if (wepon.w == 4)
         {
-
+            w4.SetActive(true);
+            w5.SetActive(false);
+        }
+        if (wepon.w == 5)
+        {
+            w4.SetActive(false);
+            w5.SetActive(true);
         }
     }
     void OnTriggerEnter(Collider other)

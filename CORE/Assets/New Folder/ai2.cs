@@ -37,7 +37,6 @@ public class ai2 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.Find("00");
-        dead = false;
     }
 
     void Update()
@@ -173,8 +172,7 @@ public class ai2 : MonoBehaviour
                 {
                     TMP.ctrl.getscore(1);
                 }
-                Destroy(this.gameObject, 1);
-                exp.manager.getscore(50);
+                Invoke("death", 1);
                 this.GetComponent<Animation>().Play("ed 002");
                 dead = true;
             }
@@ -217,5 +215,17 @@ public class ai2 : MonoBehaviour
             Damage(10);
             Instantiate(att, transform.position, transform.rotation);//特效
         }
+    }
+    void death()
+    {
+        exp.manager.getscore(50);
+      // enemy.manager.rebirth(1);
+        pool<ai2>.Instance.Recycle(this);
+    }
+    void OnEnable()
+    {
+        dead = false;
+        hp = 150;
+        this.GetComponent<Animation>().Play("er 002");
     }
 }

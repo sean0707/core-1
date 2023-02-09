@@ -10,6 +10,8 @@ public class TMP : MonoBehaviour
     public static TMP ctrl;
     // TextMeshPro Text;
     public TextMeshProUGUI Text;
+    public bag bag;
+    public coin coin;
     public string m;
     string Str;
     string Name;
@@ -23,7 +25,7 @@ public class TMP : MonoBehaviour
         ctrl = this;
     }
     void Start()
-            
+
     {
         Text = gameObject.GetComponent<TextMeshProUGUI>();
         Name = "C";
@@ -33,7 +35,7 @@ public class TMP : MonoBehaviour
     void Update()
     {
 
-        if(m == "b")
+        if (m == "b")
         {
             y = 1;
         }
@@ -41,14 +43,14 @@ public class TMP : MonoBehaviour
         {
             y = 2;
         }
-        if( x >= y)
+        if (x >= y)
         {
             //   clear = true;
-            Invoke("Clear",0);
+            Invoke("Clear", 0);
         }
         else
         {
-          //  clear = false;
+            //  clear = false;
         }
         if (quest.ctrl.Q)
         {
@@ -60,14 +62,14 @@ public class TMP : MonoBehaviour
         }
     }
     void ReadFile(string Name)
+    {
+        strs = File.ReadAllLines(Name);
+        for (int i = 0; i < strs.Length; i++)
         {
-            strs = File.ReadAllLines(Name);
-            for (int i = 0; i < strs.Length; i++)
-            {
-                Str += strs[i];
-                Str += "\n";
-            }
+            Str += strs[i];
+            Str += "\n";
         }
+    }
     public void getscore(int value)
     {
         x += value;
@@ -75,9 +77,25 @@ public class TMP : MonoBehaviour
     }
     void Clear()
     {
+        if (m == "a")
+        {
+            exp.manager.getscore(50);
+        }
+        if (m == "b")
+        {
+            getcoin(100);
+        }
         effect.gameObject.GetComponent<ParticleSystem>().Play();
-        exp.manager.getscore(50);
         x = 0;
         Text.text = Resources.Load<TextAsset>(m).text + "(" + x + "/" + y + ")";
+    }
+    public void getcoin(int value)
+    {
+        if (!bag.itemlist.Contains(coin))
+        {
+            bag.itemlist.Add(coin);
+
+        }
+            coin.數量 += value;
     }
 }

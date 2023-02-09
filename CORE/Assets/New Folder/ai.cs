@@ -167,8 +167,8 @@ public class ai : MonoBehaviour
             {
                 TMP.ctrl.getscore(1);
             }
-            Destroy(this.gameObject,2);
-            exp.manager.getscore(20);
+            // Destroy(this.gameObject,2);
+            Invoke("death", 2);
             this.GetComponent<Animation>().Play("ed 001");
             dead = true;
         }
@@ -210,6 +210,18 @@ public class ai : MonoBehaviour
             Damage(10);
             Instantiate(att, transform.position, transform.rotation);//特效
         }
+    }
+    void death()
+    {
+        exp.manager.getscore(20);
+        pool<ai>.Instance.Recycle(this);
+    }
+    void OnEnable()
+    {
+        dead = false;
+        hp = 100;
+        this.GetComponent<Animation>().Play("er 001");
+
     }
 
 }
