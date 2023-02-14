@@ -1,23 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[AddComponentMenu("NGUI/Examples/END")]
 public class NewBehaviourScript3 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnClick()
     {
-        
+        Application.Quit();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
-    }
-
 }

@@ -70,7 +70,7 @@ public class shot : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0) && !attack)
             {
                 bullet b = bp.Spawn(this.transform.position, this.transform.rotation, this.transform.parent);
-                t = 0.15f;
+               // t = 0.15f;
                 attack = true;
             }
             else if (t <= 0)

@@ -34,8 +34,8 @@ public class battle7 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<Animation>().Play("a7");
-                t = 1.5f;
-                move.manager.getscore(1.5f);
+                t = 1;
+                move.manager.getscore(1);
                 attack = true;
                 wepon.manager.a = true;
             }

@@ -15,9 +15,13 @@ public class over : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            end();
         }
 
+    }
+    void end()
+    {
+        Application.Quit();
     }
 
 }
