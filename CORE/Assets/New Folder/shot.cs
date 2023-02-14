@@ -9,13 +9,13 @@ public class shot : MonoBehaviour
     public GameObject b;
     private pool<bullet> bp;
     public bool attack;
-    public bool Lock;
     public float t = 1;
     // Start is called before the first frame update
     void Start()
     {
         bp = pool<bullet>.Instance;
         bp.initpool(b);
+
     }
 
     // Update is called once per frame
@@ -29,10 +29,10 @@ public class shot : MonoBehaviour
                 t = 1.1f;
                 attack = true;
             }
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !attack)
             {
                 bullet b = bp.Spawn(this.transform.position, this.transform.rotation, this.transform.parent);
-                t = 1.5f;
+                t = 0.3f;
                 attack = true;
             }
             else if (t <= 0)
@@ -48,10 +48,10 @@ public class shot : MonoBehaviour
                 t = 1.1f;
                 attack = true;
             }
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !attack)
             {
                 bullet b = bp.Spawn(this.transform.position, this.transform.rotation, this.transform.parent);
-                t = 2;
+                t = 1;
                 attack = true;
             }
             else if (t <= 0)
@@ -60,7 +60,45 @@ public class shot : MonoBehaviour
             }
             this.gameObject.GetComponent<MeshCollider>().enabled = true;
         }
-        if(target == default)
+        if (wepon.w == 6)
+        {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                t = 1.1f;
+                attack = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !attack)
+            {
+                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, this.transform.parent);
+                t = 0.15f;
+                attack = true;
+            }
+            else if (t <= 0)
+            {
+                attack = false;
+            }
+            this.gameObject.GetComponent<MeshCollider>().enabled = true;
+        }
+        if (wepon.w == 7)
+        {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                t = 1.1f;
+                attack = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !attack)
+            {
+                bullet b = bp.Spawn(this.transform.position, this.transform.rotation, this.transform.parent);
+                t = 1.5f;
+                attack = true;
+            }
+            else if (t <= 0)
+            {
+                attack = false;
+            }
+            this.gameObject.GetComponent<MeshCollider>().enabled = true;
+        }
+        if (target == default)
         {
             s.SetActive(false);
         }

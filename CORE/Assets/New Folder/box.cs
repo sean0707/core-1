@@ -8,6 +8,7 @@ public class box : MonoBehaviour
     public int ex = 0;
     public int b = 0;
     public int t1 = 0;
+    public int g;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class box : MonoBehaviour
         if(other.tag== "wepon")
         {
             Damage(1);
+            TMP.ctrl.getcoin(g);
         }
 
     }

@@ -32,7 +32,7 @@ public class battle3 : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                GetComponent<Animation>().Play("a7");
+                GetComponent<Animation>().Play("a3");
                 t = 1.5f;
                 move.manager.getscore(1.5f);
                 attack = true;

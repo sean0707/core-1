@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
+using TMPro;
 
 public class ai : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class ai : MonoBehaviour
     private Rigidbody rb;
     public GameObject area;
     public GameObject att;
+    public TextMeshProUGUI dame;
     public bool attack;
     public bool b;
     public float a = 2;
@@ -157,10 +160,13 @@ public class ai : MonoBehaviour
             //    }
         }
         rb.AddForce(Vector3.down * 50000);
+        dame.GetComponent<CanvasGroup>().alpha -= 0.01f;
     }
     void Damage(float damagevalue)
     {
         hp -= damagevalue;
+        dame.text = "" + damagevalue;
+        dame.GetComponent<CanvasGroup>().alpha = 1;
         if (hp <= 0)
         {
             if (TMP.ctrl.m == "a")
@@ -192,6 +198,11 @@ public class ai : MonoBehaviour
                 Damage(20 + NewBehaviourScript1.manager.c);
                 Instantiate(att, transform.position, transform.rotation);//特效
             }
+            if (other.name == "w08")
+            {
+                Damage(25 + NewBehaviourScript1.manager.c);
+                Instantiate(att, transform.position, transform.rotation);//特效
+            }
 
             t = t - Time.deltaTime;
         }
@@ -207,7 +218,7 @@ public class ai : MonoBehaviour
         }
         if (other.tag == "bullet")
         {
-            Damage(10);
+            Damage(NewBehaviourScript1.manager.b);
             Instantiate(att, transform.position, transform.rotation);//特效
         }
     }
@@ -215,6 +226,7 @@ public class ai : MonoBehaviour
     {
         exp.manager.getscore(20);
         pool<ai>.Instance.Recycle(this);
+        dame.text = null;
     }
     void OnEnable()
     {

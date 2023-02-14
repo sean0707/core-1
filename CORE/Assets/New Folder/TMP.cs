@@ -10,6 +10,7 @@ public class TMP : MonoBehaviour
     public static TMP ctrl;
     // TextMeshPro Text;
     public TextMeshProUGUI Text;
+    public TextMeshProUGUI money;
     public bag bag;
     public coin coin;
     public string m;
@@ -34,6 +35,7 @@ public class TMP : MonoBehaviour
 
     void Update()
     {
+        money.text = "$"+coin.數量;
 
         if (m == "b")
         {

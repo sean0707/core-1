@@ -19,7 +19,7 @@ public class battle5 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
 
@@ -33,9 +33,9 @@ public class battle5 : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                GetComponent<Animation>().Play("a9");
-                t = 2;
-                move.manager.getscore(2);
+                GetComponent<Animation>().Play("a5");
+                t = 1;
+                move.manager.getscore(1);
                 attack = true;
                 wepon.manager.a = true;
             }

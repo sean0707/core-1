@@ -9277,6 +9277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
+  money: {fileID: 0}
+  bag: {fileID: 0}
+  coin: {fileID: 0}
   m: "\uFF41"
   x: 0
   y: 0
@@ -13723,6 +13726,72 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2c9fc3f61a03aaf4ea32f05fb1efd814, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86edbd45556711442acb31da42a05ef1, type: 3}
+--- !u!1 &705944290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705944293}
+  - component: {fileID: 705944292}
+  - component: {fileID: 705944291}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &705944291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705944290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &705944292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705944290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &705944293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705944290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -764, y: 0, z: 617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708916880
 GameObject:
   m_ObjectHideFlags: 0
@@ -15436,6 +15505,7 @@ MonoBehaviour:
   b: 100
   c: 100
   d: 50
+  mode: 0
 --- !u!114 &828234413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17254,6 +17324,9 @@ MonoBehaviour:
   w3: {fileID: 500050099}
   w4: {fileID: 0}
   w5: {fileID: 0}
+  w6: {fileID: 0}
+  w7: {fileID: 0}
+  w8: {fileID: 0}
   b: {fileID: 1833548830}
   a: 0
 --- !u!114 &911886758
@@ -29811,6 +29884,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
+  money: {fileID: 0}
+  bag: {fileID: 0}
+  coin: {fileID: 0}
   m: 
   x: 0
   y: 0
@@ -39727,6 +39803,7 @@ MonoBehaviour:
   bgm: {fileID: 0}
   area: {fileID: 0}
   att: {fileID: 0}
+  dame: {fileID: 0}
   attack: 0
   b: 0
   a: 3

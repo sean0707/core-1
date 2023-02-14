@@ -68,7 +68,7 @@ ModelImporter:
     4300002: c_head_14_sf_01_0
     4300004: c_body_07_sf_01_0
     4300006: obj1
-    7400000: a9
+    7400000: a5
     9500000: //RootNode
     11100000: //RootNode
     13700000: c_body_07_sf_01_0
@@ -104,7 +104,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: a9
+      name: a5
       takeName: Take 001
       firstFrame: 0
       lastFrame: 30

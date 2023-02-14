@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
+using TMPro;
 
 public class ai2 : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class ai2 : MonoBehaviour
     private Rigidbody rb;
     public GameObject area2;
     public GameObject att;
+    public TextMeshProUGUI dame;
     public bool attack;
     public bool bg;
     public float a = 3;
@@ -160,10 +163,13 @@ public class ai2 : MonoBehaviour
             //    }
         }
         rb.AddForce(Vector3.down * 50000);
+        dame.GetComponent<CanvasGroup>().alpha -= 0.01f;
     }
     void Damage(float damagevalue)
     {
         hp -= damagevalue;
+        dame.text = "" + damagevalue;
+        dame.GetComponent<CanvasGroup>().alpha = 1;
         if (!dead)
         {
             if (hp <= 0)
@@ -197,6 +203,11 @@ public class ai2 : MonoBehaviour
                 Damage(35+ NewBehaviourScript1.manager.c);
                 Instantiate(att, transform.position, transform.rotation);//特效
             }
+            if (other.name == "w08")
+            {
+                Damage(25 + NewBehaviourScript1.manager.c);
+                Instantiate(att, transform.position, transform.rotation);//特效
+            }
 
             t = t - Time.deltaTime;
         }
@@ -212,7 +223,7 @@ public class ai2 : MonoBehaviour
         }
         if (other.tag == "bullet")
         {
-            Damage(10);
+            Damage(NewBehaviourScript1.manager.b);
             Instantiate(att, transform.position, transform.rotation);//特效
         }
     }
@@ -221,6 +232,7 @@ public class ai2 : MonoBehaviour
         exp.manager.getscore(50);
       // enemy.manager.rebirth(1);
         pool<ai2>.Instance.Recycle(this);
+        dame.text = null;
     }
     void OnEnable()
     {
