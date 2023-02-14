@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class battle5 : MonoBehaviour
 {
+    public GameObject bgm;
     public GameObject weapon;
     public bool attack;
     public float t = 1;

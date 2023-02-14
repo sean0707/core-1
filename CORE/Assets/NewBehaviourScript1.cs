@@ -46,6 +46,10 @@ public class NewBehaviourScript1 : MonoBehaviour
         {
             mode = 8;
         }
+        if (a < 17 && b < 17 && c < 17)
+        {
+            mode = 4;
+        }
 
     }
     public void  Red()

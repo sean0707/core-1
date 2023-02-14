@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class battle4 : MonoBehaviour
 {
+    public GameObject bgm;
     public GameObject weapon;
     public bool attack;
     public float t = 1;
@@ -96,8 +97,10 @@ public class battle4 : MonoBehaviour
         }
         if (attack)
         {
+
             if (t < 1)
             {
+
             //    weapon.GetComponent<MeshCollider>().enabled = true;
             }
             // weapon.SetActive(true);

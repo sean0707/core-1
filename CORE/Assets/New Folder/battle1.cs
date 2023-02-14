@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class battle1 : MonoBehaviour
 {
-  //  public GameObject bgm;
+    public GameObject bgm;
     public GameObject weapon;
     public bool attack;
     public float t = 1;
@@ -49,7 +49,6 @@ public class battle1 : MonoBehaviour
             }
         }
         if (!attack)
-
         {
             weapon.GetComponent<MeshCollider>().enabled = false;
             effect.GetComponent<TrailRenderer>().enabled = false;
