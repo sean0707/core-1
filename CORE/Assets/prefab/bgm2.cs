@@ -67,7 +67,7 @@ public class bgm2 : MonoBehaviour
                 }
                 if (wepon.w == 8)
                 {
-                    Invoke("delay",0.6f);
+                    Invoke("delay",0.3f);
                 }
             }
 

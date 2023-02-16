@@ -9,6 +9,7 @@ public class battle2 : MonoBehaviour
     public bool attack;
     public float t = 1;
     public bool idol;
+    public GameObject effect;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,7 @@ public class battle2 : MonoBehaviour
 
         {
             weapon.GetComponent<MeshCollider>().enabled = false;
+            effect.GetComponent<TrailRenderer>().enabled = false;
             //   weapon.SetActive(false);
             if (Input.GetKey(KeyCode.W))
             {
@@ -98,6 +100,7 @@ public class battle2 : MonoBehaviour
         if (attack)
         {
             weapon.GetComponent<MeshCollider>().enabled = true;
+            effect.GetComponent<TrailRenderer>().enabled = true;
             // weapon.SetActive(true);
         }
         if (t < -3)

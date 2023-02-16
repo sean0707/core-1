@@ -9,6 +9,7 @@ public class battle8 : MonoBehaviour
     public bool attack;
     public float t = 1;
     public bool idol;
+    public GameObject effect;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +35,8 @@ public class battle8 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<Animation>().Play("a8");
-                t = 1.5f;
-                move.manager.getscore(1.5f);
+                t = 1.2f;
+                move.manager.getscore(1.2f);
                 attack = true;
                 wepon.manager.a = true;
             }
@@ -49,6 +50,7 @@ public class battle8 : MonoBehaviour
 
         {
             weapon.GetComponent<MeshCollider>().enabled = false;
+            effect.GetComponent<TrailRenderer>().enabled = false;
             //   weapon.SetActive(false);
             if (Input.GetKey(KeyCode.W))
             {
@@ -96,6 +98,7 @@ public class battle8 : MonoBehaviour
         }
         if (attack)
         {
+            effect.GetComponent<TrailRenderer>().enabled = true;
             if (t < 1)
             {
                 weapon.GetComponent<MeshCollider>().enabled = true;

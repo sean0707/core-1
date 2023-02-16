@@ -61,6 +61,8 @@ public class bullet : MonoBehaviour
         }
         if (wepon.w == 7)
         {
+            w4.SetActive(false);
+            w5.SetActive(false);
             w6.SetActive(false);
             w7.SetActive(true);
         }
@@ -69,6 +71,7 @@ public class bullet : MonoBehaviour
     {
         if(other.tag == "enemy")
         {
+            t = c;
             pool<bullet>.Instance.Recycle(this);
         }
     }
