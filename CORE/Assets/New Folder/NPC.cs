@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public bool N;
+    public int  C;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +15,17 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
-            N = true;
+            if (TMP.ctrl.p < C)
+            {
+                GetComponent<SphereCollider>().enabled = false;
+                N = true;
+            }
         }
     }
     void OnTriggerExit(Collider other)
@@ -28,7 +33,7 @@ public class NPC : MonoBehaviour
         if (other.tag == "Player")
         {
             N = false;
-
+            GetComponent<SphereCollider>().enabled = true;
         }
     }
 }

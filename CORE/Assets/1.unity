@@ -4988,12 +4988,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
+  pt: {fileID: 1295393861}
   money: {fileID: 487967639}
   bag: {fileID: 11400000, guid: ffd537d9eb93c1b49a865ab44b75929d, type: 2}
   coin: {fileID: 11400000, guid: ade88db657ac6544f841f0925131e72a, type: 2}
   m: 
   x: 0
   y: 1
+  p: 0
   clear: 0
   effect: {fileID: 12172885}
 --- !u!222 &24279141
@@ -5664,12 +5666,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
+  pt: {fileID: 0}
   money: {fileID: 0}
   bag: {fileID: 0}
   coin: {fileID: 0}
   m: 
   x: 0
   y: 0
+  p: 0
   clear: 0
   effect: {fileID: 0}
 --- !u!114 &280432803
@@ -29301,7 +29305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1295393860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29310,7 +29314,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295393859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000061035156}
+  m_LocalPosition: {x: 0, y: 0, z: -35563}
   m_LocalScale: {x: 1.6570597, y: 2.1635149, z: 1}
   m_Children: []
   m_Father: {fileID: 751695089}
@@ -29318,7 +29322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53, y: -2}
+  m_AnchoredPosition: {x: 116, y: 81}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295393861
@@ -29341,10 +29345,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\u734E\u52F5"
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29410,13 +29414,13 @@ MonoBehaviour:
   m_margin: {x: 20.648739, y: 14.917028, z: 85.950485, w: 14.951101}
   m_textInfo:
     textComponent: {fileID: 1295393861}
-    characterCount: 2
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -29749,7 +29753,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357203116}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

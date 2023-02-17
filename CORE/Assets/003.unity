@@ -3211,6 +3211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfd7e22ed8ef154398630eea796645f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 1835632654}
   attack: 0
   t: 1
@@ -3318,6 +3319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   N: 0
+  C: 0
 --- !u!1 &145228966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,10 +5072,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfa8f3fd2758554dbe12d6cd69587eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 500050099}
   attack: 0
   t: 1
   idol: 0
+  effect: {fileID: 0}
 --- !u!111 &207690036
 Animation:
   m_ObjectHideFlags: 0
@@ -7260,6 +7264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfd7e22ed8ef154398630eea796645f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 0}
   attack: 0
   t: 1
@@ -9283,6 +9288,7 @@ MonoBehaviour:
   m: "\uFF41"
   x: 0
   y: 0
+  p: 0
   clear: 0
   effect: {fileID: 0}
 --- !u!222 &405126326
@@ -11217,6 +11223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   N: 0
+  C: 1
 --- !u!135 &530148527
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29890,6 +29897,7 @@ MonoBehaviour:
   m: 
   x: 0
   y: 0
+  p: 0
   clear: 0
   effect: {fileID: 0}
 --- !u!114 &1483420424
@@ -31944,6 +31952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfd7e22ed8ef154398630eea796645f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 1835632654}
   attack: 0
   t: 1
@@ -36253,10 +36262,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfa8f3fd2758554dbe12d6cd69587eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 500050099}
   attack: 0
   t: 1
   idol: 0
+  effect: {fileID: 0}
 --- !u!114 &1833548832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36269,10 +36280,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac381709d4296274f880a58b18519255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 794709054}
   attack: 0
   t: 1
   idol: 0
+  effect: {fileID: 0}
 --- !u!114 &1833548833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36285,6 +36298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfd7e22ed8ef154398630eea796645f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 1835632654}
   attack: 0
   t: 1
@@ -37320,10 +37334,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac381709d4296274f880a58b18519255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
   weapon: {fileID: 794709054}
   attack: 0
   t: 1
   idol: 0
+  effect: {fileID: 0}
 --- !u!111 &1875538189
 Animation:
   m_ObjectHideFlags: 0

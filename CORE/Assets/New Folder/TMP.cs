@@ -10,6 +10,7 @@ public class TMP : MonoBehaviour
     public static TMP ctrl;
     // TextMeshPro Text;
     public TextMeshProUGUI Text;
+    public TextMeshProUGUI pt;
     public TextMeshProUGUI money;
     public bag bag;
     public coin coin;
@@ -19,6 +20,7 @@ public class TMP : MonoBehaviour
     string[] strs;
     public int x;
     public int y;
+    public int p;
     public bool clear;
     public GameObject effect;
     private void Awake()
@@ -36,6 +38,7 @@ public class TMP : MonoBehaviour
     void Update()
     {
         money.text = "$"+coin.數量;
+        pt.text = "" + p;
 
         if (m == "b")
         {
@@ -82,9 +85,11 @@ public class TMP : MonoBehaviour
         if (m == "a")
         {
             exp.manager.getscore(50);
+            p++;
         }
         if (m == "b")
         {
+            p++;
             getcoin(100);
         }
         effect.gameObject.GetComponent<ParticleSystem>().Play();
