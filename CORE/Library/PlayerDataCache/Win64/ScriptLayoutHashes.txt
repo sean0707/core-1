@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/USER/Desktop/CORE 3/CORE.exe
+C:/Users/USER/Desktop/core 4/CORE.exe
 SceneListBegin?
 Assets/0.unity
 Assets/001.unity
