@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 318720227}
   - component: {fileID: 318720226}
   - component: {fileID: 318720225}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: area
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -218,6 +218,7 @@ MonoBehaviour:
   bgm: {fileID: 8782600906004385628, guid: 3e19952bc8938de46bd2b5a72003d4b4, type: 3}
   area: {fileID: 318720224}
   att: {fileID: 4156121100698124981, guid: 2b0f9d6362c73974bad3b52574b34f7e, type: 3}
+  dame: {fileID: 0}
   attack: 0
   b: 0
   a: 3

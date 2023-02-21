@@ -29,14 +29,14 @@ public class battle8 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F1))
             {
-                t = 1.1f;
+                t = 1;
                 attack = true;
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GetComponent<Animation>().Play("a8");
-                t = 1.2f;
-                move.manager.getscore(1.2f);
+                t = 1.3f;
+                move.manager.getscore(1.3f);
                 attack = true;
                 wepon.manager.a = true;
             }

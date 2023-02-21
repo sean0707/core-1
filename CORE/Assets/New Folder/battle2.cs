@@ -30,7 +30,7 @@ public class battle2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F1))
             {
-                t = 1.1f;
+                t = 1;
                 attack = true;
             }
             if (Input.GetKeyDown(KeyCode.Mouse0))

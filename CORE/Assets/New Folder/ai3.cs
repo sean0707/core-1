@@ -200,23 +200,23 @@ public class ai3 : MonoBehaviour
             {
                 if (other.name == "w01")
                 {
-                    Damage(10 + NewBehaviourScript1.manager.c);
+                    Damage(10 + NewBehaviourScript1.manager.c + move.manager.damege);
                     Instantiate(att, transform.position, transform.rotation);//特效
                 }
 
                 if (other.name == "w02")
                 {
-                    Damage(5 + NewBehaviourScript1.manager.c);
+                    Damage(5 + NewBehaviourScript1.manager.c + move.manager.damege);
                     Instantiate(att, transform.position, transform.rotation);//特效
                 }
                 if (other.name == "w03")
                 {
-                    Damage(20 + NewBehaviourScript1.manager.c);
+                    Damage(20 + NewBehaviourScript1.manager.c + move.manager.damege);
                     Instantiate(att, transform.position, transform.rotation);//特效
                 }
                 if (other.name == "w08")
                 {
-                    Damage(25 + NewBehaviourScript1.manager.c);
+                    Damage(25 + NewBehaviourScript1.manager.c + move.manager.damege);
                     Instantiate(att, transform.position, transform.rotation);//特效
                 }
             }

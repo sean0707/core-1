@@ -78,7 +78,7 @@ public class ai2 : MonoBehaviour
                 {
                     attack = true;
                     this.GetComponent<Animation>().Play("ea 002");
-                    a = Random.Range(4, 6);
+                    a = Random.Range(5, 6);
 
                 }
                 else
@@ -190,22 +190,22 @@ public class ai2 : MonoBehaviour
         {
             if (other.name == "w01")
             {
-                Damage(15+ NewBehaviourScript1.manager.c);
+                Damage(15+ NewBehaviourScript1.manager.c + move.manager.damege);
                 Instantiate(att, transform.position, transform.rotation);//特效
             }
             if (other.name == "w02")
             {
-                Damage(5+ NewBehaviourScript1.manager.c);
+                Damage(5+ NewBehaviourScript1.manager.c + move.manager.damege);
                 Instantiate(att, transform.position, transform.rotation);//特效
             }
             if (other.name == "w03")
             {
-                Damage(35+ NewBehaviourScript1.manager.c);
+                Damage(35+ NewBehaviourScript1.manager.c + move.manager.damege);
                 Instantiate(att, transform.position, transform.rotation);//特效
             }
             if (other.name == "w08")
             {
-                Damage(25 + NewBehaviourScript1.manager.c);
+                Damage(25 + NewBehaviourScript1.manager.c + move.manager.damege);
                 Instantiate(att, transform.position, transform.rotation);//特效
             }
 

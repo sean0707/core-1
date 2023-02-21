@@ -101,7 +101,6 @@ public class TMP : MonoBehaviour
         if (!bag.itemlist.Contains(coin))
         {
             bag.itemlist.Add(coin);
-
         }
             coin.數量 += value;
     }

@@ -10,6 +10,9 @@ public class move : MonoBehaviour
     // Start is called before the first frame update
     public Rigidbody rb;
     public bool attack;
+    public bool pow;
+    public float up;
+    public float damege;
     public float j;
 
 
@@ -125,7 +128,16 @@ public class move : MonoBehaviour
              }
 
         rb.AddForce(Vector3.down * 25000);
-
+        if (up > 0)
+        {
+            up = up - Time.deltaTime;
+            damege = 20;
+        }
+        else if(up <= 0)
+        {
+            pow = false;
+            damege = 0;
+        }
     }
 
        
@@ -147,5 +159,13 @@ public class move : MonoBehaviour
     {
         Application.LoadLevel("001");
         Destroy(this.gameObject);
+    }
+    public void powup(float value)
+    {
+        if (!pow)
+        {
+            pow = true;
+        }
+        up = value;
     }
 }
