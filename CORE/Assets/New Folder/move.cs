@@ -131,7 +131,7 @@ public class move : MonoBehaviour
         if (up > 0)
         {
             up = up - Time.deltaTime;
-            damege = 20;
+            damege = 15;
         }
         else if(up <= 0)
         {
@@ -148,6 +148,13 @@ public class move : MonoBehaviour
         {
             Application.LoadLevel(other.name);
 
+        }
+        if(other.name == "drive")
+        {
+            if (TMP.ctrl.m == "c")
+            {
+                TMP.ctrl.getscore(1);
+            }
         }
     }
     public void getscore(float value)

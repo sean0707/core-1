@@ -4884,8 +4884,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "\u60C5\u5831\n\n\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e75200866fa93004aae208995aed5012, type: 2}
-  m_sharedMaterial: {fileID: 21090335794708652, guid: e75200866fa93004aae208995aed5012,
+  m_fontAsset: {fileID: 11400000, guid: 5da888da219e73244b3d59ae98bd6568, type: 2}
+  m_sharedMaterial: {fileID: 21842488671115248, guid: 5da888da219e73244b3d59ae98bd6568,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

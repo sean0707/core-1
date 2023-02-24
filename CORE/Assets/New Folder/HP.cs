@@ -24,11 +24,11 @@ public class HP : MonoBehaviour
     {
         if(other.name == "area")
         {
-        currentHealth = currentHealth - (15 - NewBehaviourScript1.manager.a);
+        currentHealth = currentHealth - (25 - NewBehaviourScript1.manager.a);
         }
         if (other.name == "area 2")
         {
-            currentHealth = currentHealth - (30 - NewBehaviourScript1.manager.a);
+            currentHealth = currentHealth - (40 - NewBehaviourScript1.manager.a);
         }
     }
     // Update is called once per frame

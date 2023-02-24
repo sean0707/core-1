@@ -33,7 +33,7 @@ public class NPC : MonoBehaviour
         if (other.tag == "Player")
         {
             N = false;
-            GetComponent<SphereCollider>().enabled = true;
+            GetComponent<Collider>().enabled = true;
         }
     }
 }

@@ -48,6 +48,10 @@ public class TMP : MonoBehaviour
         {
             y = 2;
         }
+        if (m == "c")
+        {
+            y = 1;
+        }
         if (x >= y)
         {
             //   clear = true;
@@ -84,13 +88,19 @@ public class TMP : MonoBehaviour
     {
         if (m == "a")
         {
-            exp.manager.getscore(50);
+            exp.manager.getscore(100);
             p++;
         }
         if (m == "b")
         {
             p++;
             getcoin(100);
+        }
+        if (m == "c")
+        {
+            p++;
+            exp.manager.getscore(50);
+            getcoin(150);
         }
         effect.gameObject.GetComponent<ParticleSystem>().Play();
         x = 0;

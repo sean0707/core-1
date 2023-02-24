@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: b50f7c88ca754814387a32a3cc91ebf1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5949453586121104c8327483b1c904d5, type: 2}
     - target: {fileID: 2300000, guid: b50f7c88ca754814387a32a3cc91ebf1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -187,10 +191,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 096a2bffb34f4c749bca450ba8cd3647, type: 2}
-    - target: {fileID: 9500000, guid: b50f7c88ca754814387a32a3cc91ebf1, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5949453586121104c8327483b1c904d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50f7c88ca754814387a32a3cc91ebf1, type: 3}
 --- !u!1 &23465175 stripped
@@ -584,7 +584,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 34068e5c40101df43b7a980de4ba6bbd, type: 3}
       propertyPath: m_Name
-      value: note
+      value: c
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 34068e5c40101df43b7a980de4ba6bbd, type: 3}
+      propertyPath: m_TagString
+      value: npc
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 34068e5c40101df43b7a980de4ba6bbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -681,6 +685,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   on: 0
+--- !u!114 &490801612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490801609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacf66324425594abd9f8c4743915a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  N: 0
+  C: 0
 --- !u!1 &498300545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: building4.1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 46c53ea528c1ecc4aa86e252502461fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 46c53ea528c1ecc4aa86e252502461fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2048
@@ -1352,6 +1374,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bc11ac5e2afae494698e9c0e959f51f2, type: 2}
+    - target: {fileID: 2300000, guid: 46c53ea528c1ecc4aa86e252502461fc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 46c53ea528c1ecc4aa86e252502461fc, type: 3}
       propertyPath: m_Mesh
       value: 
