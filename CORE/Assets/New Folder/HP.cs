@@ -22,13 +22,14 @@ public class HP : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.name == "area")
+       int s = NewBehaviourScript1.manager.a + equipment.manager.amor.def;
+        if (other.name == "area")
         {
-        currentHealth = currentHealth - (25 - NewBehaviourScript1.manager.a);
+        currentHealth = currentHealth - (25 - s );
         }
         if (other.name == "area 2")
         {
-            currentHealth = currentHealth - (40 - NewBehaviourScript1.manager.a);
+            currentHealth = currentHealth - (35 - s);
         }
     }
     // Update is called once per frame

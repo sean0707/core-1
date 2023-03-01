@@ -12,6 +12,8 @@ Assets/1.unity
 Assets/006.unity
 Assets/007.unity
 Assets/008.unity
+Assets/009.unity
+Assets/010.unity
 SceneListEnd?
 a1f19ad47d3094e235f21b74dfc423a8 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer
 1095ec9f3eeae7eb7d180ab9e73b4cb3 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.ExponentialFog
@@ -270,6 +272,8 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+b7a27cf4f80522d0528b7a1bb23e4691 Assembly-CSharp.dll:.port
+cc092cb7ab393f4fdc30e0b587074399 Assembly-CSharp.dll:.getitem
 8b7ab3e01e398137620c0bc31ff095be Assembly-CSharp.dll:.UICursor
 c845d81dd997d5094da7cdf0cc923eb4 Assembly-CSharp.dll:.TweenRotation
 85b104ab42fb50172cc8a1c9e33072bb Assembly-CSharp.dll:.UIPopupList
@@ -329,9 +333,11 @@ bf0bed106f64e52738ceba1969dd25d8 Assembly-CSharp.dll:.battle4
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UIDragDropRoot
 914a4ea75ef00cb6543d20c55c7a476e Assembly-CSharp.dll:.LookAtTarget
 6aed80ce73ce8e49bb8b9531cb34e90e Assembly-CSharp.dll:.UIAtlas
+f5d4928b8d738e94ebb3f6c30f57c840 Assembly-CSharp.dll:.open
 a99b59d27d911423ed976291aea0f77f Assembly-CSharp.dll:.UIButtonRotation
 ee0cef6caaac8ae485bfa82f000f0f7b Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
+b788f4546df7ef6047c5385c5fdbff2c Assembly-CSharp.dll:.newcout
 bf0bed106f64e52738ceba1969dd25d8 Assembly-CSharp.dll:.battle5
 f69dfc6409fbbd89d3689368e99688a8 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerVector2
 9e91e872c10e8312d0de8b4654683f9e Assembly-CSharp.dll:.UIWrapContent
@@ -364,7 +370,7 @@ acd4fee18762886003fb1ed6915529ab Assembly-CSharp.dll:.AnimatedAlpha
 859cb41235fda6874a87e3fa03c097f1 Assembly-CSharp.dll:.box
 20d9445fc1a18bf6156877b78eedf0b2 Assembly-CSharp.dll:.UIDragDropItem
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-325248a88b9a64c555ec9ac4aee78b75 Assembly-CSharp.dll:.bag
+bbe024b8f6d2c11c52abdc4cef5585e5 Assembly-CSharp.dll:.bag
 c7e4512fcd582338edef9bff6c4fe8e1 Assembly-CSharp.dll:.UIKeyBinding
 a30eb80f4e3392ef758dac0f4bbf4a7e Assembly-CSharp.dll:.coin
 575d7eb29b0299d1349b4593e172e4a1 Assembly-CSharp.dll:.ai2
@@ -414,6 +420,5 @@ d5429fb4266f6b47dd315864cdf43aea Assembly-CSharp.dll:.UISliderColors
 b9face9af655ba0eda02142a1cbc8c24 Assembly-CSharp.dll:.ai3
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.zone
-f5d4928b8d738e94ebb3f6c30f57c840 Assembly-CSharp.dll:.open
-fbb69e5e88a4c62a4b4e379d71883086 Assembly-CSharp.dll:.getitem
-b788f4546df7ef6047c5385c5fdbff2c Assembly-CSharp.dll:.newcout
+0139352f75b5fe614751c64b6b5486fd Assembly-CSharp.dll:.equip
+9f1a63cf56022e4c1588894256830157 Assembly-CSharp.dll:.equipment

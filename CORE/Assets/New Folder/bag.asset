@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemlist:
   - {fileID: 11400000, guid: ade88db657ac6544f841f0925131e72a, type: 2}
+  - {fileID: 11400000, guid: b8730ea8f903fc544ac805b04254d873, type: 2}
+  equiplist: []
