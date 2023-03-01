@@ -5,9 +5,9 @@ using UnityEngine;
 public class NewBehaviourScript1 : MonoBehaviour
 {
     public static NewBehaviourScript1 manager;
-    public int a = 100;
-    public int b = 100;
-    public int c = 100;
+    public int a ;
+    public int b ;
+    public int c ;
     public int d;
     public int mode;
     // Start is called before the first frame update

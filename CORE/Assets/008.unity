@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: b8730ea8f903fc544ac805b04254d873, type: 2}
+  equip: {fileID: 0}
   t: 1
 --- !u!1001 &167137759
 PrefabInstance:
