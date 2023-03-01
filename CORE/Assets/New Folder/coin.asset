@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ce74ed30e394a4f8502ff370c521ce, type: 3}
   m_Name: coin
   m_EditorClassIdentifier: 
-  "\u540D\u7A31": 
-  "\u7269\u4EF6": {fileID: 0}
+  "\u540D\u7A31": 010
+  "\u7269\u4EF6": {fileID: 100000, guid: 53563574e1567ff4383a7b15c86a18e1, type: 3}
   "\u6578\u91CF": 0

@@ -5,11 +5,11 @@ using UnityEngine;
 public class getitem : MonoBehaviour
 {
     public coin item;
-    public equip equip;
     public bool t;
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -29,10 +29,6 @@ public class getitem : MonoBehaviour
                     if (!TMP.ctrl.bag.itemlist.Contains(item))
                     {
                         TMP.ctrl.bag.itemlist.Add(item);
-                    }
-                    if (!equipment.manager.bag.equiplist.Contains(equip))
-                    {
-                        equipment.manager.get(equip);
                     }
                     item.數量++;
                     t = false;

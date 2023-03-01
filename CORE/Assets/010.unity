@@ -890,7 +890,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: b8730ea8f903fc544ac805b04254d873, type: 2}
-  equip: {fileID: 11400000, guid: f433017202fa9cc4e805c44e7bfb8faf, type: 2}
   t: 1
 --- !u!114 &1227530198
 MonoBehaviour:
