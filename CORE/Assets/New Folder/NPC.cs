@@ -6,6 +6,7 @@ public class NPC : MonoBehaviour
 {
     public bool N;
     public int  C;
+    public int pt;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class NPC : MonoBehaviour
                 GetComponent<SphereCollider>().enabled = false;
                 N = true;
             }
+            TMP.ctrl.s = pt;
         }
     }
     void OnTriggerExit(Collider other)

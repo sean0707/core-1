@@ -12,6 +12,7 @@ TagManager:
   - check
   - wepon
   - bullet
+  - mob
   layers:
   - Default
   - TransparentFX

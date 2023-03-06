@@ -21,6 +21,7 @@ public class TMP : MonoBehaviour
     public int x;
     public int y;
     public int p;
+    public int s;
     public bool clear;
     public GameObject effect;
     private void Awake()
@@ -52,20 +53,26 @@ public class TMP : MonoBehaviour
         {
             y = 1;
         }
-        if (x >= y)
+        if (!clear)
         {
-            //   clear = true;
-            Invoke("Clear", 0);
-        }
-        else
-        {
-            //  clear = false;
+            if (x >= y)
+            {
+                //   clear = true;
+                Invoke("Clear", 0);
+                clear = true;
+            }
+            else
+            {
+                //  clear = false;
+            }
         }
         if (quest.ctrl.Q)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
+                x = 0;
                 Text.text = Resources.Load<TextAsset>(m).text + "(" + x + "/" + y + ")";
+                clear = false;
             }
 
         }
@@ -89,16 +96,16 @@ public class TMP : MonoBehaviour
         if (m == "a")
         {
             exp.manager.getscore(100);
-            p++;
+            p = p + s;
         }
         if (m == "b")
         {
-            p++;
+            p = p + s;
             getcoin(100);
         }
         if (m == "c")
         {
-            p++;
+            p = p + s;
             exp.manager.getscore(50);
             getcoin(150);
         }

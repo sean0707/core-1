@@ -3320,6 +3320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   N: 0
   C: 0
+  pt: 1
 --- !u!1 &145228966
 GameObject:
   m_ObjectHideFlags: 0
@@ -9282,6 +9283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
+  pt: {fileID: 0}
   money: {fileID: 0}
   bag: {fileID: 0}
   coin: {fileID: 0}
@@ -9289,6 +9291,7 @@ MonoBehaviour:
   x: 0
   y: 0
   p: 0
+  s: 0
   clear: 0
   effect: {fileID: 0}
 --- !u!222 &405126326
@@ -11224,6 +11227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   N: 0
   C: 1
+  pt: 0
 --- !u!135 &530148527
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17349,7 +17353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Q: 0
+  M: 0
   myObjArray: {fileID: 0}
+  "\u63D0\u793A": {fileID: 0}
 --- !u!114 &911886759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17414,6 +17420,9 @@ MonoBehaviour:
   characterController: {fileID: 0}
   rb: {fileID: 0}
   attack: 0
+  pow: 0
+  up: 0
+  damege: 0
   j: 0
   t: 1
   speed: 2
@@ -29891,6 +29900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
+  pt: {fileID: 0}
   money: {fileID: 0}
   bag: {fileID: 0}
   coin: {fileID: 0}
@@ -29898,6 +29908,7 @@ MonoBehaviour:
   x: 0
   y: 0
   p: 0
+  s: 0
   clear: 0
   effect: {fileID: 0}
 --- !u!114 &1483420424

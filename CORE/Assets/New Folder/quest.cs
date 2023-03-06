@@ -6,7 +6,9 @@ public class quest : MonoBehaviour
 {
     public static quest ctrl;
     public bool Q;
+    public bool M;
     public GameObject myObjArray;
+    public GameObject 提示;
 
 
     private void Awake()
@@ -16,25 +18,33 @@ public class quest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (!M)
+        {
+            提示.gameObject.GetComponent<ParticleSystem>().Play();
+        }
     }
     void OnTriggerStay(Collider other)
     {
         if (other.tag == "npc")
         {
             Q = true;
+            M = true;
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 myObjArray = other.gameObject;
                 TMP.ctrl.m = myObjArray.name;
             }
-
+        }
+        if (other.tag == "mob")
+        {
+            M = true;
         }
     }
     void OnTriggerExit(Collider other)
@@ -42,8 +52,13 @@ public class quest : MonoBehaviour
         if (other.tag == "npc")
         {
             Q = false;
+            M = false;
             myObjArray = default;
 
+        }
+        if (other.tag == "mob")
+        {
+            M = false;
         }
     }
 }
