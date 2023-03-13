@@ -1,13 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Xml.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System;
+using System.IO;
+using System.Text;
+
 
 public class auto : MonoBehaviour
 {
+    public int hp;
+    public int ep;
+    public static auto manager;
+    public bool check;
+    public GameObject player;
     public string levelName;
     // Start is called before the first frame update
     void Start()
     {
+        if (manager == null)
+        {
+            manager = this;
+        }
+        if (check)
+        {
+            FileStream fs = new FileStream(Application.dataPath + "/save.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs);
+            levelName = sr.ReadLine();
+            player.gameObject.transform.position = new Vector3(float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()));
+            hp = int.Parse(sr.ReadLine());
+            ep = int.Parse(sr.ReadLine());
+            check = false;
+        }
+        else
+        {
+            levelName = "003";
+        }
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
     }
 

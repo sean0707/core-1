@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/USER/Desktop/core 4/CORE.exe
+C:/Users/USER/Desktop/CORE 5/CORE.exe
 SceneListBegin?
 Assets/0.unity
 Assets/001.unity
@@ -17,6 +17,7 @@ Assets/010.unity
 SceneListEnd?
 a1f19ad47d3094e235f21b74dfc423a8 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer
 1095ec9f3eeae7eb7d180ab9e73b4cb3 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.ExponentialFog
+9f1a63cf56022e4c1588894256830157 Assembly-CSharp.dll:.equipment
 726fcf7961cbb4108aa5be5e55b8c8bf Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ColorGrading
 b13de7a0a457cb8e026d4237dc1b5797 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.LensDistortion
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -151,7 +152,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.G
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 7d1a3e12579b7bd0f94909057ffba8d0 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.CameraSwitcher
-46caddcb506484a842f4e639640dada0 Assembly-CSharp.dll:.NPC
+519e3cfcf69d98b9f4bf744ab4b0502e Assembly-CSharp.dll:.NPC
 4b56d99c2c4b41f872acbbb4e34ebba7 Assembly-CSharp.dll:.UIScrollView
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 13c1f31760f53fe1490e72fce12a0a44 Unity.RenderPipelines.Lightweight.Runtime.dll:UnityEngine.Experimental.Rendering.LightweightPipeline.LightweightRenderPipelineResources
@@ -193,10 +194,10 @@ f80eb5ce0a319c05861df60997a03ab4 Assembly-CSharp.dll:.TweenPosition
 5e1eefcd5106de6c2e85908a3b2d3f04 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerToggle
 bf0bed106f64e52738ceba1969dd25d8 Assembly-CSharp.dll:.battle7
 59c071b444855a73676b10d2796e94e1 Assembly-CSharp.dll:.wepon
-c54e5d238d05f0415928866fafbf602e Assembly-CSharp.dll:.LoadLevelOnClick
+888878d54c5125adcc779b62d62b491b Assembly-CSharp.dll:.LoadLevelOnClick
 eea5432127e1c2d004b5b21205ff5a02 Assembly-CSharp.dll:.ExampleDragDropSurface
 109f86e77e3e584a98030da6ccd86928 Assembly-CSharp.dll:.UISnapshotPoint
-c54e5d238d05f0415928866fafbf602e Assembly-CSharp.dll:.auto
+60b4c89c96f48d2256cf5267015d6a3e Assembly-CSharp.dll:.auto
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UISoundVolume
 3882922ca0f91a771970d0ec6d5cc006 Assembly-CSharp.dll:.TweenFOV
 61b9d9b6f4b6a222dfea8b131b3d3227 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ChromaticAberration
@@ -230,7 +231,7 @@ a96b2e79cb442899c4474f7d72dce30f Assembly-CSharp.dll:.UIEventTrigger
 d6fc8d3165070298511ec776ea575626 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessResources
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 87d4b8b22bd197551628d78ccff4ad12 Assembly-CSharp.dll:.NewBehaviourScript4
-f9b244d5d5526d3b34605e9dd47827f1 Assembly-CSharp.dll:.TMP
+e35f1e618c0c23771a5939d036236eb4 Assembly-CSharp.dll:.TMP
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UIDrawCall
 45bb2b2655d27f3704df1b7760176a73 Assembly-CSharp.dll:.counter
 622546c1b2212a505b64070eeabb1323 Assembly-CSharp.dll:.UICamera
@@ -252,6 +253,7 @@ f8df8f9481b4b718d9d4c3cb4730a6e1 Assembly-CSharp.dll:.UITooltip
 c64bb912025d1272d4e3ed97cad36f6f Assembly-CSharp.dll:.battle2
 cadf30517c697c763871277b9402353e Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.DiffusionProfileSettings
 077a655851f95717e3c15e754ebc0c57 Assembly-CSharp.dll:.UIInput
+0139352f75b5fe614751c64b6b5486fd Assembly-CSharp.dll:.equip
 b5cb570ac5a62367af5a0cf6053048c3 Assembly-CSharp.dll:.jump
 f050e4ebd311386367bb1906f9218b01 Unity.RenderPipelines.Lightweight.Runtime.dll:UnityEngine.Experimental.Rendering.LightweightPipeline.LWRPAdditionalLightData
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.end
@@ -273,7 +275,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 b7a27cf4f80522d0528b7a1bb23e4691 Assembly-CSharp.dll:.port
-cc092cb7ab393f4fdc30e0b587074399 Assembly-CSharp.dll:.getitem
+37309b896b72bf404a6466ca0672df26 Assembly-CSharp.dll:.getitem
 8b7ab3e01e398137620c0bc31ff095be Assembly-CSharp.dll:.UICursor
 c845d81dd997d5094da7cdf0cc923eb4 Assembly-CSharp.dll:.TweenRotation
 85b104ab42fb50172cc8a1c9e33072bb Assembly-CSharp.dll:.UIPopupList
@@ -313,7 +315,7 @@ c69e10d82263d95eba11560757139ceb Unity.RenderPipelines.Lightweight.Runtime.dll:U
 63138764ece58e419cec332206280527 Assembly-CSharp.dll:.trace
 69dfab5a403b62a464b79ef63b1ec40b Assembly-CSharp.dll:.UIProgressBar
 1f39d2f426328607799f207e1d7c5a11 Assembly-CSharp.dll:.UIDragScrollView
-2565dc44d059a2c6120b13c9afbb04ed Assembly-CSharp.dll:.quest
+a1f8263e5c777612e9f8d60f9601dacc Assembly-CSharp.dll:.quest
 df819f0bc77c8d047eca1df91bbaa90d Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerPanel
 0a3fa1a367fddc65eb32515029503334 Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerButton
 931f489e44eadf809e9310429c99dde5 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
@@ -353,7 +355,7 @@ f8355d202074d9681c2685b091af852c Assembly-CSharp.dll:.UIButtonActivate
 3882922ca0f91a771970d0ec6d5cc006 Assembly-CSharp.dll:.TweenVolume
 b29f3b546c4c8daaf864491e6c89a3ec Assembly-CSharp.dll:.UIKeyNavigation
 b3ed03d302c29cd0147d66a8975759b7 Assembly-CSharp.dll:.UIButtonKeys
-d347f8f8ae8451c5354a90c3ee46a212 Assembly-CSharp.dll:.move
+35d3e7b80a1e00ee8500905fa558068d Assembly-CSharp.dll:.move
 26842f53c06df7dc820708e7930e13dd Assembly-CSharp.dll:.bgm
 445a5c00465b89f1b3687a85358d7a2d Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.HDPipeline.GradientSky
 fb099559c2ace725dcbe00e3af632ba5 Assembly-CSharp.dll:.UIToggledObjects
@@ -391,6 +393,7 @@ d916570daafd9430d123385723dcdd1f Assembly-CSharp.dll:.ActiveAnimation
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ee
 cd1e91f5afed259a1512bbf18dc12bd7 Unity.RenderPipelines.HighDefinition.Runtime.dll:.SceneRenderPipeline
 d024ab1e71afa25cd9c549c76eb3f29b Assembly-CSharp.dll:.enemy
+54653c6613c59c2ddcac5ea59246e513 Assembly-CSharp.dll:.save
 ac6acd886c54c48c599ab5fed5781ea7 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.AmbientOcclusion
 bf0bed106f64e52738ceba1969dd25d8 Assembly-CSharp.dll:.battle6
 75a65e549e27c1b84f230b068f20e3b7 Assembly-CSharp.dll:.UI2DSprite
@@ -420,5 +423,3 @@ d5429fb4266f6b47dd315864cdf43aea Assembly-CSharp.dll:.UISliderColors
 b9face9af655ba0eda02142a1cbc8c24 Assembly-CSharp.dll:.ai3
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.HighDefinition.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.zone
-0139352f75b5fe614751c64b6b5486fd Assembly-CSharp.dll:.equip
-9f1a63cf56022e4c1588894256830157 Assembly-CSharp.dll:.equipment

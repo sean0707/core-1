@@ -110,7 +110,7 @@ public class TMP : MonoBehaviour
             getcoin(150);
         }
         effect.gameObject.GetComponent<ParticleSystem>().Play();
-        x = 0;
+       // x = 0;
         Text.text = Resources.Load<TextAsset>(m).text + "(" + x + "/" + y + ")";
     }
     public void getcoin(int value)

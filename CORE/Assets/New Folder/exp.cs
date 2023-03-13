@@ -14,6 +14,7 @@ public class exp : MonoBehaviour
         {
             manager = this;
         }
+        score = auto.manager.ep;
     }
 
     // Update is called once per frame

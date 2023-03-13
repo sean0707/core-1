@@ -1,11 +1,34 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Xml.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System;
+using System.IO;
+using System.Text;
 
 [AddComponentMenu("NGUI/Examples/Load Level On Click")]
 public class LoadLevelOnClick : MonoBehaviour
 {
 	public string levelName;
-
-	void OnClick ()
+    [SerializeField]
+    Text text;
+    [SerializeField]
+    PlayerData data;
+    [System.Serializable]
+    public class PlayerData
+    {
+        public string name;
+        public int hp;
+        public int exp;
+        public GameObject gameObject;
+        // public float X;
+        //  public float Y;
+        //   public float Z;
+    }
+    void OnClick ()
 	{
 		if (!string.IsNullOrEmpty(levelName))
 		{
@@ -16,4 +39,17 @@ public class LoadLevelOnClick : MonoBehaviour
 #endif
 		}
 	}
+    public void save()
+    {
+        FileStream fs = new FileStream(Application.dataPath + "/save.txt", FileMode.Create);
+        StreamWriter sw = new StreamWriter(fs);
+        sw.WriteLine(data.name);
+        sw.WriteLine(transform.position.x);
+        sw.WriteLine(transform.position.y);
+        sw.WriteLine(transform.position.z);
+        sw.WriteLine(data.hp);
+        sw.WriteLine(data.exp);
+        sw.Close();
+        fs.Close();
+    }
 }

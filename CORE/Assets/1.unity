@@ -4996,6 +4996,7 @@ MonoBehaviour:
   x: 0
   y: 1
   p: 0
+  s: 0
   clear: 0
   effect: {fileID: 12172885}
 --- !u!222 &24279141
@@ -5674,6 +5675,7 @@ MonoBehaviour:
   x: 0
   y: 0
   p: 0
+  s: 0
   clear: 0
   effect: {fileID: 0}
 --- !u!114 &280432803
@@ -11951,6 +11953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6499895b6ecbfa4f8f07fb4680e421a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 1
+  player: {fileID: 1204703218}
   levelName: 003
 --- !u!1 &579897274
 GameObject:
@@ -12533,7 +12537,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818982802}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -12548,7 +12552,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -22149,7 +22153,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 10007
+    m_Bits: 42775
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -28377,6 +28381,7 @@ GameObject:
   - component: {fileID: 1204703222}
   - component: {fileID: 1204703221}
   - component: {fileID: 1204703220}
+  - component: {fileID: 1204703226}
   m_Layer: 14
   m_Name: 00
   m_TagString: Player
@@ -28524,6 +28529,28 @@ MonoBehaviour:
   j: 0
   t: 0
   speed: 3
+--- !u!114 &1204703226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204703218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7ea69eecd4e1c43a3c39919a3a9379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  c: {fileID: 0}
+  check: 1
+  myObjArray: {fileID: 0}
+  text: {fileID: 0}
+  data:
+    name: 
+    hp: 0
+    exp: 0
+    gameObject: {fileID: 0}
+    X: 0
 --- !u!1 &1207247965
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class HP : MonoBehaviour
     public GameObject up;
     public GameObject player;
     public static HP manager;
-    public const int maxHealth = 200;
+    public const int maxHealth = 100;
     public int currentHealth = maxHealth;
     public RectTransform a,b;
     public int LV;
@@ -19,6 +19,7 @@ public class HP : MonoBehaviour
         {
             manager = this;
         }
+        currentHealth = auto.manager.hp;
     }
     void OnTriggerEnter(Collider other)
     {

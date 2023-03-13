@@ -8656,7 +8656,7 @@ MonoBehaviour:
   hp: 1
   ex: 10
   b: 1
-  t1: 1
+  t1: 0
   g: 0
 --- !u!1001 &1105324894
 PrefabInstance:

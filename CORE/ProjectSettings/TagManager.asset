@@ -13,6 +13,7 @@ TagManager:
   - wepon
   - bullet
   - mob
+  - save
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - check
   - enemy
   - player
-  - 
+  - save
   - 
   - 
   - 

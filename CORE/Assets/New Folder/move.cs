@@ -14,6 +14,7 @@ public class move : MonoBehaviour
     public float up;
     public float damege;
     public float j;
+    public int a;
 
 
     // enum Mode
