@@ -49,6 +49,9 @@ public class LoadLevelOnClick : MonoBehaviour
         sw.WriteLine(transform.position.z);
         sw.WriteLine(data.hp);
         sw.WriteLine(data.exp);
+        sw.WriteLine(11);
+        sw.WriteLine(11);
+        sw.WriteLine(11);
         sw.Close();
         fs.Close();
     }

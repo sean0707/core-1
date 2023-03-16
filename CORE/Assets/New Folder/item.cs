@@ -13,6 +13,7 @@ public class item : MonoBehaviour
     public GameObject x2;
     public GameObject player;
     public GameObject hef;
+    public GameObject pow;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +61,7 @@ public class item : MonoBehaviour
                 move.manager.getscore(1);
                 move.manager.powup(40);
                 player.GetComponent<Animation>().Play("heal");
-                hef.gameObject.GetComponent<ParticleSystem>().Play();
+                pow.gameObject.GetComponent<ParticleSystem>().Play();
             }
         }
     }

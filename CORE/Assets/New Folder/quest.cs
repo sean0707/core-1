@@ -29,6 +29,7 @@ public class quest : MonoBehaviour
         {
             提示.gameObject.GetComponent<ParticleSystem>().Play();
         }
+
     }
     void OnTriggerStay(Collider other)
     {

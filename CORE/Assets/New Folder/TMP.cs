@@ -33,6 +33,7 @@ public class TMP : MonoBehaviour
     {
         Text = gameObject.GetComponent<TextMeshProUGUI>();
         Name = "C";
+        //getscore(0);
     }
 
 
@@ -74,6 +75,7 @@ public class TMP : MonoBehaviour
                 Text.text = Resources.Load<TextAsset>(m).text + "(" + x + "/" + y + ")";
                 clear = false;
             }
+
 
         }
     }

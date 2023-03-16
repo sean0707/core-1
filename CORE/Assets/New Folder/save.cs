@@ -24,6 +24,12 @@ public class save : MonoBehaviour
         public string name;
         public int hp;
         public int exp;
+        public int A;
+        public int B;
+        public int C;
+        public int D;
+        public string QUEST;
+        public GameObject deta;
         public GameObject gameObject;
         public float X;
         //  public float Y;
@@ -42,6 +48,10 @@ public class save : MonoBehaviour
         //   name = data.name;
         data.hp = HP.manager.currentHealth;
         data.exp = exp.manager.score;
+        data.A = NewBehaviourScript1.manager.a;
+        data.B = NewBehaviourScript1.manager.b;
+        data.C = NewBehaviourScript1.manager.c;
+        data.D = NewBehaviourScript1.manager.d;
         if (check)
         {
            if (Input.GetKeyUp(KeyCode.T))
@@ -60,6 +70,13 @@ public class save : MonoBehaviour
             sw.WriteLine(transform.position.z);
             sw.WriteLine(data.hp);
             sw.WriteLine(data.exp);
+            sw.WriteLine(data.A);
+            sw.WriteLine(data.B);
+            sw.WriteLine(data.C);
+            sw.WriteLine(data.D);
+            sw.WriteLine(data.deta.transform.position.x);
+            sw.WriteLine(data.deta.transform.position.y);
+            sw.WriteLine(data.deta.transform.position.z);
             sw.Close();
             fs.Close(); 
 

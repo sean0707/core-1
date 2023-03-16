@@ -596,6 +596,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c671d9ff70a2f0840bb4fa3d4d4b9213, type: 3}
+      propertyPath: m_TagString
+      value: mob
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c671d9ff70a2f0840bb4fa3d4d4b9213, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1279

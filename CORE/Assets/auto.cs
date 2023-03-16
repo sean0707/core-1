@@ -16,9 +16,14 @@ public class auto : MonoBehaviour
 {
     public int hp;
     public int ep;
+    public int A;
+    public int B;
+    public int C;
+    public int D;
     public static auto manager;
     public bool check;
     public GameObject player;
+    public GameObject deta;
     public string levelName;
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,11 @@ public class auto : MonoBehaviour
             player.gameObject.transform.position = new Vector3(float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()));
             hp = int.Parse(sr.ReadLine());
             ep = int.Parse(sr.ReadLine());
+            A = int.Parse(sr.ReadLine());
+            B = int.Parse(sr.ReadLine());
+            C = int.Parse(sr.ReadLine());
+            D = int.Parse(sr.ReadLine());
+            deta.gameObject.transform.position = new Vector3(float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()));
             check = false;
         }
         else

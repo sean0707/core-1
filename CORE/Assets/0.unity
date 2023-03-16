@@ -337,7 +337,6 @@ MonoBehaviour:
     hp: 0
     exp: 0
     gameObject: {fileID: 0}
-    X: 0
 --- !u!114 &1391933089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,14 +916,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df31385379812441bfc75a419c76729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: 1
+  levelName: 2
   text: {fileID: 0}
   data:
     name: 003
     hp: 100
     exp: 0
     gameObject: {fileID: 0}
-    X: 0
 --- !u!212 &2146527855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1012,11 +1010,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 2146527854}
-    mMethodName: save
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!65 &2146527858
 BoxCollider:
   m_ObjectHideFlags: 0
