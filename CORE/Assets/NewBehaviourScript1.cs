@@ -17,10 +17,14 @@ public class NewBehaviourScript1 : MonoBehaviour
         {
             manager = this;
         }
-        a = auto.manager.A;
-        b = auto.manager.B;
-        c = auto.manager.C;
-        d = auto.manager.D;
+     /*   if (savedata.check)
+        {
+         a = auto.manager.A;
+         b = auto.manager.B;
+         c = auto.manager.C;
+         d = auto.manager.D;
+        }*/
+
     }
 
     // Update is called once per frame

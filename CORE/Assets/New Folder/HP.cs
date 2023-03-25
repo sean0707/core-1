@@ -19,7 +19,13 @@ public class HP : MonoBehaviour
         {
             manager = this;
         }
-        currentHealth = auto.manager.hp;
+        //   currentHealth = auto.manager.hp;
+        if (savedata.check)
+        {
+                currentHealth = auto.manager.hp;
+           //   currentHealth = savedata.PlayerData.hp;
+        }
+
     }
     void OnTriggerEnter(Collider other)
     {

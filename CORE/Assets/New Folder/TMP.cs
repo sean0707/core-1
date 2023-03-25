@@ -33,7 +33,7 @@ public class TMP : MonoBehaviour
     {
         Text = gameObject.GetComponent<TextMeshProUGUI>();
         Name = "C";
-        //getscore(0);
+      //  getscore(0);
     }
 
 

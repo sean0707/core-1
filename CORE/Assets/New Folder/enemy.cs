@@ -10,7 +10,9 @@ public class enemy : MonoBehaviour
     private pool<ai2> ep;
     private pool<ai> ap;
     public GameObject[] s;
+    public int point;
     public bool c;
+    public int[] g;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +26,16 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+       
     }
     void rec()
     {
+
         //int point = Random.Range(0, s.Length);
-       // GetComponent<CapsuleCollider>().enabled = true;
+        // GetComponent<CapsuleCollider>().enabled = true;
         if (!d.activeInHierarchy)
         {
+
             ai2 e = ep.Spawn(s[0].transform.position, this.transform.rotation, s[0].transform.parent);
             ai a = ap.Spawn(s[1].transform.position, this.transform.rotation, s[1].transform.parent);
         }
@@ -46,4 +49,5 @@ public class enemy : MonoBehaviour
             d = other.gameObject;
         }
     }
+
 }

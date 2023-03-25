@@ -2360,7 +2360,9 @@ MonoBehaviour:
   - {fileID: 1852999780}
   - {fileID: 622116987}
   - {fileID: 244126348}
+  point: 0
   c: 0
+  g: 010000000200000003000000
 --- !u!4 &1303189818
 Transform:
   m_ObjectHideFlags: 0

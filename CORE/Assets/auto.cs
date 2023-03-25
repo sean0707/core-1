@@ -32,7 +32,7 @@ public class auto : MonoBehaviour
         {
             manager = this;
         }
-        if (check)
+        if (savedata.check)
         {
             FileStream fs = new FileStream(Application.dataPath + "/save.txt", FileMode.Open);
             StreamReader sr = new StreamReader(fs);
@@ -45,7 +45,7 @@ public class auto : MonoBehaviour
             C = int.Parse(sr.ReadLine());
             D = int.Parse(sr.ReadLine());
             deta.gameObject.transform.position = new Vector3(float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()), float.Parse(sr.ReadLine()));
-            check = false;
+
         }
         else
         {
